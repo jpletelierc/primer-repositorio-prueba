@@ -1,0 +1,423 @@
+body{
+    background:#eef3f7;
+    margin:0;
+    padding: 2px;
+    font-family:Segoe UI,Arial,sans-serif;
+}
+
+.card{
+    border:none;
+    border-radius:12px;
+}
+
+h1{
+    font-weight:300;
+}
+
+hr{
+    margin-top:8px;
+    margin-bottom:10px;
+}
+
+
+.cabecera-ponderadores{
+    display:grid;
+    grid-template-columns:1fr 70px 90px 60px;
+    gap:8px;
+    background:#F4F6F8;
+    padding:10px 12px;
+    margin-top:15px;
+    margin-bottom:15px;
+    border-radius:6px;
+    border:1px solid #E2E8F0;
+
+    color:#0B5FA5;
+    font-size:12px;
+    font-weight:700;
+    text-transform:uppercase;
+}
+
+.fila-ponderador{
+    display:grid;
+    grid-template-columns:
+        1fr
+        70px
+        110px
+        55px;
+    gap:8px;
+    align-items:center;
+    margin-bottom:10px;
+}
+
+.col-valor input{
+    width:100%;
+    text-align:right;
+    font-size:14px !important;
+    padding-left:6px !important;
+    padding-right:6px !important;
+}
+
+.col-grupo{
+    font-weight:600;
+    font-size:14px;
+}
+
+.col-oficial{
+    text-align:center;
+    color:#666;
+    font-size:16px;
+}
+
+.col-valor input{
+    text-align:right;
+}
+
+.col-pct{
+    text-align:center;
+    color:#43A047;
+    font-weight:bold;
+}
+
+.suma-ponderadores{
+    display:flex;
+    justify-content:space-between;
+    margin-top:15px;
+    font-size:16px;
+    font-weight:bold;
+}
+
+.pie-ponderadores{
+    display:grid;
+    grid-template-columns:1fr 120px 50px;
+    gap:10px;
+    align-items:center;
+    margin-top:0;
+}
+
+.pie-valor{
+    text-align:right;
+    font-size:18px;
+    font-weight:bold;
+    color:#333;
+}
+
+.pie-pct{
+    text-align:right;
+    font-size:18px;
+    font-weight:bold;
+    color:#43A047;
+}
+
+.btn-calcular{
+    height:38px;
+    font-size:14px;
+    font-weight:600;
+}
+.col-pct{
+    color:#43A047;
+    font-weight:700;
+    font-size:14px;
+}
+
+.col-oficial{
+    color:#666;
+    font-size:12px;
+}
+
+.fila-ponderador:hover{
+    background:#f8fafc;
+    border-radius:4px;
+}
+
+.panel-comparacion{
+    margin:0;
+    background:#F8FAFC;
+    border:1px solid #E2E8F0;
+    border-radius:8px;
+    padding:12px;
+    margin-bottom:10px;
+}
+
+#panelGrafico{
+    margin-bottom:10px;
+    margin:0
+    width:100%;
+}
+
+.nota-ict{
+    font-size:14px;
+    color:#555;
+    line-height:1.5;
+}
+
+.titulo-comparacion{
+    color:#0B5FA5;
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:10px;
+    line-height:1.2;
+    overflow-wrap:anywhere;
+}
+
+.comparacion-dato{
+    font-size:14px;
+    color:#555;
+    line-height:1.6;
+}
+
+.panel-resultado{
+    background:white;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    padding:20px;
+}
+
+.titulo-seccion{
+    color:#0B5FA5;
+    font-size:28px;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+.subtitulo-ict{
+    color:#0B5FA5;
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+
+.linea-resultado{
+    font-size:14px;
+    color:#555;
+    margin-bottom:6px;
+}
+
+.valor-indice{
+    font-weight:600;
+    color:#222;
+}
+
+.caja-reajuste{
+    background:#F8FAFC;
+    border:1px solid #E2E8F0;
+    border-radius:8px;
+    padding:8px;
+    margin-top:10px;
+    text-align:center;
+}
+
+.caja-reajuste-label{
+    font-size:13px;
+    color:#666;
+    margin-bottom:1px;
+}
+
+.caja-reajuste-valor{
+    font-size:32px;
+    font-weight:700;
+}
+
+.reajuste-oficial{
+    color:#1565C0;
+}
+
+.reajuste-alt{
+    color:#00875A;
+}
+
+.bloque-ict{
+    margin-bottom:20px;
+}
+
+.separador-ict{
+    border-top:1px solid #DEE2E6;
+    margin:20px 0;
+}
+
+.panel-ict{
+    background:white;
+    border-radius:10px;
+    padding:15px;
+    min-height:220px;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    margin-bottom:15px;
+}
+
+.header-ict{
+    display:grid;
+    grid-template-columns:
+        120px
+        1fr
+        120px;
+
+    align-items:center;
+    height:85px;
+    background:linear-gradient(
+        90deg,
+        #163F6B 0%,
+        #27578D 100%
+    );
+    border-radius:12px;
+    margin-bottom:10px;
+    box-shadow:
+        0 2px 10px
+        rgba(0,0,0,.10);
+    width:100%;
+    box-sizing:border-box;
+}
+
+.header-left{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+.header-center{
+    color:white;
+    font-size:32px;
+    font-weight:500;
+    text-align:center;
+    letter-spacing:.5px;
+}
+
+.header-right{
+    visibility:hidden;
+}
+
+
+.header-left img{
+    height:76px;
+    width:auto;
+    display:block;
+}
+
+.contenedor-grafico{
+    position:relative;
+    height:375px;
+    width:100%;
+}
+
+.nota-ponderadores{
+    background:#F8FAFC;
+    border:1px solid #E2E8F0;
+    border-radius:6px;
+    padding:10px 12px;
+    margin-top:3px;
+    margin-bottom:3px;
+    font-size:14px;
+    color:#555;
+    line-height:1.4;
+}
+.panel-resultado-individual{
+    background:white;
+    border-radius:12px;
+    padding:16px;
+    box-shadow:
+        0 2px 10px rgba(0,0,0,.08);
+    overflow:hidden;
+    width:100%;
+    min-height:170px;
+    box-sizing:border-box;
+}
+
+#resultado .row{
+    display:grid;
+    grid-template-columns:
+        repeat(2,minmax(0,1fr));
+    gap:15px;
+    margin:0;
+    padding:0;
+}
+
+
+@media (max-width: 1200px){
+    #resultado .row{
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+#resultado .col-md-6{
+    width:100%;
+    margin-bottom:10px;
+}
+
+#resultado{
+    margin:0;
+    width:100%;
+}
+
+.formula-ict{
+    background:white;
+}
+
+
+.formula-imagen{
+    text-align:center;
+    padding:25px 10px;
+}
+
+.formula-imagen img{
+    max-width:100%;
+    width:933px;
+    height:auto;
+}
+
+.mensaje-sin-datos{
+    text-align:center;
+    color:#666;
+    font-size:14px;
+    line-height:1.6;02
+    padding:30px 15px;
+}
+
+.col-xl-4{
+    padding-right:12px !important;
+    margin-bottom:15px;
+}
+
+.container-fluid{
+
+    padding-left:4px !important;
+
+    padding-right:4px !important;
+
+}
+
+
+@media (max-width: 768px){
+
+    .header-ict{
+
+        grid-template-columns:
+            80px
+            1fr;
+
+        height:auto;
+
+        padding:10px;
+
+    }
+
+    .header-right{
+
+        display:none;
+
+    }
+
+    .header-left img{
+
+        height:55px;
+
+    }
+
+    .header-center{
+
+        font-size:24px;
+
+    }
+
+}

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Calculadora ICT</title>
+
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+<link
+rel="stylesheet"
+href="./css/style.css">
+
+</head>
+
+
+<body>
+
+<div class="container-fluid px-4">
+
+    <div class="header-ict">
+
+    <div class="header-left">
+
+        <img
+        src="./images/logoine_Azul_2.png"
+        alt="INE">
+
+    </div>
+
+    <div class="header-center">
+
+        Calculadora ICT
+
+    </div>
+
+    <div class="header-right">
+
+    </div>
+
+</div>
+
+    <div class="row">
+
+        <div class="col-xl-4 col-lg-4">
+
+
+            <div class="card p-3 shadow">
+                <div class="titulo-comparacion">
+                    Cálculo de reajuste
+                </div>
+
+                <label>
+                    Valor a reajustar
+                </label>
+
+                <input
+                id="valorBase"
+                type="text"
+                class="form-control mb-3"
+                value="0">
+
+                <div class="row mb-3">
+                    
+                    <div class="col-md-6">
+                        <label>
+                            Año Inicial
+                        </label>
+                        
+                        <select
+                        id="anioInicial"
+                        class="form-select">
+                        </select>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <label>
+                            Mes Inicial
+                        </label>
+                        <select
+                        id="mesInicial"
+                        class="form-select">
+                    </select>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label>
+                        Año Final
+                    </label>
+                    <select
+                    id="anioFinal"
+                    class="form-select">
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label>
+                    Mes Final
+                </label>
+                <select
+                id="mesFinal"
+                class="form-select">
+            </select>
+        </div>
+    </div>
+                <hr>
+                <div class="titulo-comparacion">
+                    Ajuste de estructura de ponderación
+                </div>
+
+                <div class="nota-ponderadores">
+                    Ingrese costos, gastos o ponderaciones para cada grupo. Puede utilizar montos reales de su operación.
+                     El sistema calculará automáticamente la participación porcentual de cada componente para generar un
+                      ICT alternativo y estimar el reajuste correspondiente.
+
+                </div>
+
+
+                <div class="cabecera-ponderadores">
+                    <div>Grupo</div>
+
+                    <div style="text-align:center">
+                        % Oficial
+                    </div>
+                    <div style="text-align:center">
+                        Valor
+                    </div>
+                    <div style="text-align:center">
+                        %
+                    </div>
+                </div>
+                
+                <div class="fila-ponderador">
+                    <div class="col-grupo">
+                        Combustibles
+                    </div>
+                    <div class="col-oficial">
+                        27,27144
+                    </div>
+                    <div class="col-valor">
+                    <input
+                        id="pondCombustible"
+                        class="form-control"
+                        type="text"
+                        value="0">
+                    </div>
+                    
+                    <div
+                        id="pctCombustible"
+                        class="col-pct">
+                        0%
+                    </div>
+                </div>
+                
+            
+                <div class="fila-ponderador">
+                    <div class="col-grupo">
+                    Recursos Humanos
+                    </div>
+                    <div class="col-oficial">
+                    43,07536
+                    </div>
+                    <div class="col-valor">
+                    <input
+                        id="pondRRHH"
+                        class="form-control"
+                        type="text"
+                        value="0">
+                    </div>
+                    <div
+                        id="pctRRHH"
+                        class="col-pct">
+                        0%
+                    </div>
+                </div>
+                
+                <div class="fila-ponderador">
+                    <div class="col-grupo">
+                        Servicios Circulación
+                    </div>
+                    <div class="col-oficial">
+                        9,03167
+                    </div>
+                    <div class="col-valor">
+                        <input
+                        id="pondCirculacion"
+                        class="form-control"
+                        type="text"
+                        value="0">
+                    </div>
+                    <div
+                        id="pctCirculacion"
+                        class="col-pct">
+                        0%
+                    </div>
+                </div>
+                
+                <div class="fila-ponderador">
+                    <div class="col-grupo">
+                        Servicios Financieros
+                    </div>
+                    <div class="col-oficial">
+                        6,40015
+                    </div>
+                    <div class="col-valor">
+                        <input
+                        id="pondFinancieros"
+                        class="form-control"
+                        type="text"
+                        value="0">
+                    </div>
+                    <div
+                    id="pctFinancieros"
+                    class="col-pct">
+                    0%
+                </div>
+            </div>
+            <div class="fila-ponderador">
+                <div class="col-grupo">
+                    Repuestos y Accesorios
+                </div>
+                <div class="col-oficial">
+                    9,21366
+                </div>
+                <div class="col-valor">
+                    <input
+                    id="pondRepuestos"
+                    class="form-control"
+                    type="text"
+                    value="0">
+                </div>
+                
+                <div
+                    id="pctRepuestos"
+                    class="col-pct">
+                    0%
+                </div>
+            </div>
+        
+            <div class="fila-ponderador">
+                <div class="col-grupo">
+                    Mantención y Reparación
+                </div>
+                <div class="col-oficial">
+                    5,00772
+                </div>
+                
+                <div class="col-valor">
+                    <input
+                        id="pondMantencion"
+                        class="form-control"
+                        type="text"
+                        value="0">
+                    </div>
+                    <div
+                    id="pctMantencion"
+                    class="col-pct">
+                    0%
+                </div>
+            </div>
+            
+
+
+                <div class="pie-ponderadores">
+                    
+                    <button
+                    id="btnCalcular"
+                    class="btn btn-primary btn-calcular">
+                    Calcular
+                </button>
+                <div
+                id="sumaValor"
+                class="pie-valor">
+                0
+            </div>
+            <div
+            id="sumaPorcentaje"
+            class="pie-pct">
+            0%
+        </div>
+    </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-xl-8 col-lg-8">
+
+
+                <div id="resultado">
+                </div>
+
+                <div
+                    id="comparacion"
+                    class="panel-comparacion">
+                    <div class="nota-ict">
+
+                        <p class="titulo-comparacion">
+                            Nota:     
+                        </p>
+
+                        La calculadora ICT permite calcular
+                        la variación del Índice de Costos del
+                        Transporte (ICT) entre dos períodos y
+                        actualizar valores monetarios utilizando
+                        la variación oficial del índice.
+                        <br><br>
+
+                        Internamente se realizan los cálculos con 12 decimales del índice y 
+                        las variaciones resultantes a un decimal, ya que la variación oficial 
+                        del índice también es a un decima.
+                        
+                    </div>
+                </div>
+            
+            
+                <div
+                   id="panelGrafico"
+                   class="card p-4 shadow">
+                   <div class="formula-ict">
+
+                    <p class="titulo-comparacion">
+
+                         A continuación, se muestra la fórmula 
+                         utilizada por la calculadora ICT para 
+                         realizar el cálculo de reajustes. 
+                         Los valores del índice dependen del mes 
+                         y año de inicio y término que se seleccionen.
+                         
+
+                    </p>
+
+                    <hr>
+
+                    <div class="formula-imagen">
+
+                        <img
+                            src="./images/formula_ict.png">
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            </div>
+
+            </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="./js/data.js"></script>
+<script src="./js/ict.js"></script>
+<script src="./js/ict-alternativo.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/autonumeric@4.10.5"></script>
+<script src="./js/app.js"></script>
+
+
+</body>
+
+</html>
